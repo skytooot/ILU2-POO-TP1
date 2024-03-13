@@ -98,6 +98,18 @@ public class Village {
 		return marche.trouverVendeur(vendeur);
 	}
 	
+	public String partirVendeur(Gaulois vendeur) {
+		StringBuilder chaine = new StringBuilder();
+		chaine.append(marche.trouverVendeur(vendeur).libererEtal());
+		return chaine.toString();
+	}
+	
+	public String afficherMarche() {
+		StringBuilder chaine = new StringBuilder();
+		chaine.append("Le marché du village \""+getNom()+"\" possède plusieurs étals :");
+		chaine.append(marche.afficherMarche());
+		return chaine.toString();
+	}
 	
 
 	public String getNom() {
